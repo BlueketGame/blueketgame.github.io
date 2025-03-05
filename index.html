@@ -8,15 +8,18 @@
   </head>
   <body>
     <h1>Blueket</h1>
+    <h3>Blukens: <span id=blukens>0</span>span</h3>
     <br>
     <button id="one" onclick=packone()>pack one, 25 blukens</button>
     <img id="bluk" src="Blank.png" width=100 height=100>
     <script>
       var blukens = 100;
+      document.getElementById("blukens").innerHTML = blukens;
       function packone(){
         if (blukens >= 25) {
         document.getElementById("bluk").src="Beans.jpg";
         blukens -= 25;
+        document.getElementById("blukens").innerHTML = blukens;
         }
       }
     </script>
