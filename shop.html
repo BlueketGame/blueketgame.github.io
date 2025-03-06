@@ -17,6 +17,7 @@
     
       var rand = 0;
       var tokens = +localStorage.getItem("tokens");
+      document.getElementById("tokens").innerHTML = tokens;
       if (localStorage.getItem("heatforge")!= 1 && != 2) {
           localStorage.setItem("heatforge", 1);
         }
