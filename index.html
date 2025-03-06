@@ -15,6 +15,7 @@
     <button onclick="location.href='tokens.html';">tokens</button>
     <button id="one" onclick=packone()>glitch pack, 25 tokens</button>
     <button id="heatyforge" onclick="lavaforge()">???</button>
+    <button id="sfa" onclick="sfa()">???</button>
     <button id="kirbs" onclick="location.href='kirbs.html';">myKirbs</button>
     <img id="kirb" src="Blank.png" width=250 height=200>
     <h3 id="rare"></h3> <h3>    </h3> <h3 id="perc"></h3>
@@ -44,6 +45,14 @@
       }
      if (localStorage.getItem("heatforge") == 1) {
        document.getElementById("heatyforge").innerHTML = "heatforge";
+      }
+      if (localStorage.getItem("wizard") == 1) {
+       document.getElementById("sfa").innerHTML = "sacraficialAlter";
+      }
+      function sfa() {
+        if (localStorage.getItem("wizard") == 1) {
+          location.href='sfa.html';
+        }
       }
       function lavaforge(){
         if(localStorage.getItem("heatforge") == 1) {
