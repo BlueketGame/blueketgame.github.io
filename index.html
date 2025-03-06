@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blueket</title>
+    <title>Kirbo TCGP</title>
   </head>
   <body>
-    <h1>Blueket</h1>
+    <h1>Kirbo TCGP</h1>
     <h3>tokens: <span id=tokens>0</span></h3>
     <br>
+
+    <button onclick="location.href='shop.html';">shop</button>
+    <button onclick="location.href='tokens.html';">tokens</button>
     <button id="one" onclick=packone()>glitch pack, 25 tokens</button>
-    <img id="kirb" src="Blank.png" width=100 height=100>
+    <img id="kirb" src="Blank.png" width=250 height=200>
     <script>
+      if (localStorage.getItem("played") != 1 && localStorage.getItem("played") != 2) {
+        localStorage.setItem("tokens", 250);
+        localStorage.setItem("played", 1);
+        alert("Hi! I'm bob!");
+        alert("You can't see me, because david didn't want to draw me :(");
+        alert("Anyway, open your first pack by clicking the button :o");
+        alert("Oh?");
+        alert("You can't do that because i'm in the way?");
+        alert("Fine i'll leave :(")
+      }
       var rand = 0;
-      var tokens = 10000;
+      var tokens = localStorage.getItem("tokens");
       document.getElementById("tokens").innerHTML = tokens;
       function packone(){
         rand = Math.random() * (1000 - 1) + 1;
@@ -33,7 +46,7 @@
             document.getElementById("kirb").src="IMG_0787.jpeg";
           } else if (rand <= 750) {
             document.getElementById("kirb").src="IMG_0788.jpeg";
-          } else if (rand <= 775) {
+          } else if (rand <= 765) {
             document.getElementById("kirb").src="IMG_0789.jpeg";
           } else if (rand <= 900) {
             document.getElementById("kirb").src="IMG_0782.jpeg";
@@ -48,7 +61,21 @@
 
 
         tokens -= 25;
+        localStorage.setItem("tokens", tokens);
         document.getElementById("tokens").innerHTML = tokens;
+        if (localStorage.getItem("played") == 1) {
+          alert("Good job you hit a button");
+          alert("I'm so proud of you...");
+          alert("wow that card sucks");
+          alert("I'm just saying that even though I don't know what you got (more of david's lazy coding suffer)");
+          alert("Hey it's david! I hope you are having fun right now.");
+          alert("You won't be having fun for long, because you will develop a crippling addiction to kirbo, what do you even call them.");
+          alert("Anyways, theres this weirdo named bob (he doesn't get his named capitalized its a style choice i'm not lazy)");
+          alert("He has a shop for some reason I don't know why.");
+          alert("Anyways, you are obligated to go there.");
+          alert("Bye.");
+          localStorage.setItem("played", 2);
+        }
         }
       }
     </script>

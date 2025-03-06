@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kirbo TCGP</title>
+  </head>
+  <body>
+    <h1>Kirbo TCGP</h1>
+    <h3>tokens: <span id=tokens>0</span></h3>
+    <br>
+    <button href=index.html>back</button>
+    <button id="one" onclick=buyheatforge()>Heat forge, price: 500 tokens</button>
+    <img id="kirb" src="Blank.png" width=100 height=100>
+    <script>
+
+      var rand = 0;
+      var tokens = localStorage.getItem("tokens");
+      document.getElementById("tokens").innerHTML = tokens;
+
+      }
+    </script>
+  </body>
+</html>
