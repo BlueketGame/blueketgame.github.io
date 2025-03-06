@@ -11,13 +11,25 @@
     <h3>tokens: <span id=tokens>0</span></h3>
     <br>
     <button onclick="location.href='index.html';">back</button>
-    <button id="one" onclick=buyheatforge()>Heat forge, price: 500 tokens (don't to buy it I havent coded in the process, so it'll do nothing.)</button>
+    <button id="one" onclick=buyheatforge()>Heat forge, price: 500 tokens</button>
 
     <script>
-
+    
       var rand = 0;
       var tokens = +localStorage.getItem("tokens");
+      if (localStorage.getItem("heatforge")!= 1 && != 2) {
+          localStorage.setItem("heatforge", 1);
+        }
       document.getElementById("tokens").innerHTML = tokens;
+      function buyheatforge(){
+        
+        if (tokens >= 500) {
+          if (localStorage.getItem("heatforge") == 1) {
+            localStorage.setItem("heatforge", 2);
+            tokens -= 500;
+          }
+        }
+      }
 
 
 
