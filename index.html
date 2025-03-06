@@ -15,10 +15,24 @@
     <button onclick="location.href='tokens.html';">tokens</button>
     <button id="one" onclick=packone()>glitch pack, 25 tokens</button>
     <img id="kirb" src="Blank.png" width=250 height=200>
+    <h3 id="rare"></h3> <h3>    </h3> <h3 id="perc"></h3>
     <script>
       if (localStorage.getItem("played") != 1 && localStorage.getItem("played") != 2) {
         localStorage.setItem("tokens", 250);
         localStorage.setItem("played", 1);
+        localStorage.setItem("one", 0);
+        localStorage.setItem("two", 0);
+        localStorage.setItem("three", 0);
+        localStorage.setItem("four", 0);
+        localStorage.setItem("five", 0);
+        localStorage.setItem("six", 0);
+        localStorage.setItem("seven", 0);
+        localStorage.setItem("eight", 0);
+        localStorage.setItem("nine", 0);
+        localStorage.setItem("ten", 0);
+        localStorage.setItem("eleven", 0);
+        localStorage.setItem("twelve", 0);
+
         alert("Hi! I'm bob!");
         alert("You can't see me, because david didn't want to draw me :(");
         alert("Anyway, open your first pack by clicking the button :o");
@@ -26,40 +40,102 @@
         alert("You can't do that because i'm in the way?");
         alert("Fine i'll leave :(")
       }
+      var one = +localStorage.getItem("one");
+      var two = +localStorage.getItem("two");
+      var three = +localStorage.getItem("three");
+      var four = +localStorage.getItem("four");
+      var five = +localStorage.getItem("five");
+      var six = +localStorage.getItem("six");
+      var seven = +localStorage.getItem("seven");
+      var eight = +localStorage.getItem("eight");
+      var nine = +localStorage.getItem("nine");
+      var ten = +localStorage.getItem("ten");
+      var eleven = +localStorage.getItem("eleven");
+      var twelve = +localStorage.getItem("twelve");
       var rand = 0;
-      var tokens = localStorage.getItem("tokens");
+      var tokens = +localStorage.getItem("tokens");
+      var rarity = 0;
+      var percent = 0;
       document.getElementById("tokens").innerHTML = tokens;
       function packone(){
         rand = Math.random() * (1000 - 1) + 1;
         if (tokens >= 25) {
           if (rand <= 200) {
             document.getElementById("kirb").src="IMG_0793.jpeg";
+            one += 1;
+            rarity = "uncommon";
+            percent = "20%";
           } else if (rand <= 400) {
-            document.getElementById("kirb").src="IMG_0790.jpeg";
-          } else if (rand <= 430) {
             document.getElementById("kirb").src="IMG_0792.jpeg";
+            two += 1;
+            rarity = "uncommon";
+            percent = "20%";
+          } else if (rand <= 430) {
+            document.getElementById("kirb").src="IMG_0790.jpeg";
+            four += 1;
+            rarity = "epic";
+            percent = "3%";
           } else if (rand <= 500) {
             document.getElementById("kirb").src="IMG_0791.jpeg";
+            three += 1;
+            rarity = "rare";
+            percent = "7%";
           } else if (rand <= 650) {
             document.getElementById("kirb").src="IMG_0786.jpeg";
+            five += 1;
+            rarity = "uncommon";
+            percent = "15%";
           } else if (rand <= 700) {
             document.getElementById("kirb").src="IMG_0787.jpeg";
+            six += 1;
+            rarity = "rare";
+            percent = "5%";
           } else if (rand <= 750) {
             document.getElementById("kirb").src="IMG_0788.jpeg";
+            seven += 1;
+            rarity = "rare";
+            percent = "5%";
           } else if (rand <= 765) {
             document.getElementById("kirb").src="IMG_0789.jpeg";
+            eight += 1;
+            rarity = "legendary";
+            percent = "1.5%";
           } else if (rand <= 900) {
             document.getElementById("kirb").src="IMG_0782.jpeg";
+            nine += 1;
+            rarity = "uncommon";
+            percent = "13.5%";
           } else if (rand <= 950) {
             document.getElementById("kirb").src="IMG_0784.jpeg";
+            ten += 1;
+            rarity = "rare";
+            percent = "5%";
           } else if (rand <= 999) {
             document.getElementById("kirb").src="IMG_0783.jpeg";
+            eleven += 1;
+            rarity = "rare";
+            percent = "4.99%";
           } else if (rand <= 1000) {
             document.getElementById("kirb").src="IMG_0785.jpeg";
+            twelve += 1;
+            rarity = "Ωmega";
+            percent = "0.1%";
           }
 
-
-
+          document.getElementById("rare").innerHTML = rarity;
+          document.getElementById("perc").innerHTML = percent;
+          localStorage.setItem("one", one);
+          localStorage.setItem("two", two);
+          localStorage.setItem("three", three);
+          localStorage.setItem("four", four);
+          localStorage.setItem("five", five);
+          localStorage.setItem("six", six);
+          localStorage.setItem("seven", seven);
+          localStorage.setItem("eight", eight);
+          localStorage.setItem("nine", nine);
+          localStorage.setItem("ten", ten);
+          localStorage.setItem("eleven", eleven);
+          localStorage.setItem("twelve", twelve);
         tokens -= 25;
         localStorage.setItem("tokens", tokens);
         document.getElementById("tokens").innerHTML = tokens;
