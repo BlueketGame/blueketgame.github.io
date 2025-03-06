@@ -14,7 +14,18 @@
     <button id="one" onclick=advancement>Make advancements in bob's research, one of every magmabo</button>
 
     <script>
-    
+      var one = +localStorage.getItem("one");
+      var two = +localStorage.getItem("two");
+      var three = +localStorage.getItem("three");
+      var four = +localStorage.getItem("four");
+      var five = +localStorage.getItem("five");
+      var six = +localStorage.getItem("six");
+      var seven = +localStorage.getItem("seven");
+      var eight = +localStorage.getItem("eight");
+      var nine = +localStorage.getItem("nine");
+      var ten = +localStorage.getItem("ten");
+      var eleven = +localStorage.getItem("eleven");
+      var twelve = +localStorage.getItem("twelve");
       var rand = 0;
       var tokens = +localStorage.getItem("tokens");
       document.getElementById("tokens").innerHTML = tokens;
@@ -25,9 +36,13 @@
             two -= 1;
             three -= 1;
             four -= 1;
+            localStorage.setItem("one", one);
+            localStorage.setItem("two", two);
+            localStorage.setItem("three", three);
+            localStorage.setItem("four", four);
             localStorage.setItem("magmaadv", 1);
             alert("Hey! Thanks!");
-            alert("YOu have unlocked new items in the shop!")
+            alert("You have unlocked new items in the shop!")
           }
         }
       }
