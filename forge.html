@@ -30,7 +30,7 @@
       var tokens = +localStorage.getItem("tokens");
       document.getElementById("tokens").innerHTML = tokens;
       function advancement(){
-        if (localStorage.getItem("magmaadv") == 1) {
+        if (localStorage.getItem("magmaadv") != 1) {
           if (one >= 1 && two >= 1 && three >= 1 && four >= 1) {
             one -= 1;
             two -= 1;
@@ -41,7 +41,7 @@
             localStorage.setItem("three", three);
             localStorage.setItem("four", four);
             localStorage.setItem("magmaadv", 1);
-            alert("Hey! Thanks!");
+            alert("Hey! Thanks! -Bob");
             alert("You have unlocked new items in the shop!")
           }
         }
