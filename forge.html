@@ -17,9 +17,6 @@
     
       var rand = 0;
       var tokens = +localStorage.getItem("tokens");
-      if (localStorage.getItem("heatforge")!= 1 && != 2) {
-          localStorage.setItem("heatforge", 1);
-        }
       document.getElementById("tokens").innerHTML = tokens;
       function advancement(){
         if (localStorage.getItem("magmaadv") == 1) {
