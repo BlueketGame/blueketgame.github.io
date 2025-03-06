@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kirbo TCGP</title>
+  </head>
+  <body>
+    <h1>Kirbo TCGP</h1>
+    <h3>tokens: <span id=tokens>0</span></h3>
+    <br>
+    <button onclick="location.href='index.html';">back</button>
+    <button id="one" onclick=advancement>Make advancements in bob's research, one of every magmabo</button>
+
+    <script>
+    
+      var rand = 0;
+      var tokens = +localStorage.getItem("tokens");
+      if (localStorage.getItem("heatforge")!= 1 && != 2) {
+          localStorage.setItem("heatforge", 1);
+        }
+      document.getElementById("tokens").innerHTML = tokens;
+      function advancement(){
+        if (localStorage.getItem("magmaadv") == 1) {
+          if (one >= 1 && two >= 1 && three >= 1 && four >= 1) {
+            one -= 1;
+            two -= 1;
+            three -= 1;
+            four -= 1;
+            localStorage.setItem("magmaadv", 1);
+          }
+        }
+      }
+
+
+
+    </script>
+  </body>
+</html>
 
