@@ -14,10 +14,32 @@
     <button id="one" onclick="heatforge()">Buy heat forge, 500 tokens</button>
 
     <script>
-
+      
       var rand = 0;
       var tokens = +localStorage.getItem("tokens");
       document.getElementById("tokens").innerHTML = tokens;
+      if (lightforge == 1 && wizard == 0) {
+        alert("hi");
+        alert("I am the wizard, Jeffery");
+        alert("I have many deals for you");
+        alert("but it'll cost you");
+        alert("I can unleash chaos onto the world");
+        alert("But you can stop me");
+        alert("If you can give me just");
+        alert(+localStorage.getItem("twelve") + 1);
+        alert("Final Boshi RA1NBOW(S)");
+        alert("You can't afford that? well then.");
+        alert("here's the deal");
+        alert("I will unleash chaos onto the world");
+        alert("but");
+        alert("It may manidest into what you call a pack");
+        alert("these special packs from other dimensions require sacrifice however.");
+        alert("The only reason I have told you this is because you have a light forge");
+        alert("If you release these spirits, they will most likeley manifest ito your light forge");
+        alert("the spirits will tell you");
+        alert("goodbye");
+        localStorage.setItem("wizard", 1);
+      }
       function heatforge(){
         if (+localStorage.getItem("heatforge") != 1) {
           if (+localStorage.getItem("tokens") >= 500) {
@@ -26,6 +48,7 @@
             tokens -= 500;
             document.getElementById("tokens").innerHTML = tokens
             localStorage.setItem("tokens", tokens);
+          
           }
         }
       }
