@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kirbo TCGP</title>
+  </head>
+  <body>
+    <h1>Kirbo TCGP</h1>
+    <h3>tokens: <span id=tokens>0</span></h3>
+    <br>
+    <button onclick="location.href='index.html';">back</button>
+    <h2>Magmabo CRT:<span id="one"></span></h2>
+    <h2>Magmabo MELT:<span id="two"></span></h2>
+    <h2>Magmabo GLITCH:<span id="three"></span></h2>
+    <h2>Magmabo RA1NBOW:<span id="four"></span></h2>
+    <h2>Kaibo CRT:<span id="five"></span></h2>
+    <h2>Kaibo MELT:<span id="six"></span></h2>
+    <h2>Kaibo GLITCH:<span id="seven"></span></h2>
+    <h2>Kaibo RA1NBOW:<span id="eight"></span></h2>
+    <h2>Final Boshi CRT:<span id="nine"></span></h2>
+    <h2>Final Boshi MELT:<span id="ten"></span></h2>
+    <h2>Final Boshi GLITCH:<span id=eleven"></span></h2>
+    <h2>Final Boshi RA1NBIOW:<span id="twelve"></span></h2>
+    <h2 id="unown">???<span id="thirteen"></span></h2>
+    <script>
+    
+      var rand = 0;
+      var tokens = +localStorage.getItem("tokens");
+      document.getElementById("one").innerHTML = localStorage.getItem("one");
+      document.getElementById("two").innerHTML = localStorage.getItem("two");
+      document.getElementById("three").innerHTML = localStorage.getItem("three");
+      document.getElementById("four").innerHTML = localStorage.getItem("four");
+      document.getElementById("five").innerHTML = localStorage.getItem("five");
+      document.getElementById("six").innerHTML = localStorage.getItem("six");
+      document.getElementById("seven").innerHTML = localStorage.getItem("seven");
+      document.getElementById("eight").innerHTML = localStorage.getItem("eight");
+      document.getElementById("nine").innerHTML = localStorage.getItem("nine");
+      document.getElementById("ten").innerHTML = localStorage.getItem("ten");
+      document.getElementById("eleven").innerHTML = localStorage.getItem("eleven");
+      document.getElementById("twelve").innerHTML = localStorage.getItem("twelve");
+
+
+
+    </script>
+  </body>
+</html>
 
