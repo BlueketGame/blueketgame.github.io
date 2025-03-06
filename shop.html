@@ -18,7 +18,16 @@
       var rand = 0;
       var tokens = +localStorage.getItem("tokens");
       document.getElementById("tokens").innerHTML = tokens;
-      
+      function heatforge(){
+        if (+localStorage.getItem("heatforge") != 1) {
+          if (+localStorage.getItem(token) >= 500) {
+            localStorage.setItem("heatforge", 1);
+             tokens = +localStorage.getItem("tokens");
+            tokens -= 500;
+            localStorage.setItem("tokens", tokens);
+          }
+        }
+      }
 
 
     </script>
