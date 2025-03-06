@@ -11,7 +11,7 @@
     <h3>tokens: <span id=tokens>0</span></h3>
     <br>
     <button onclick="location.href='index.html';">back</button>
-    <button id="one" onclick=buyheatforge()>Heat forge, price: 500 tokens</button>
+    <button id="one" onclick="if (tokens >= 500) {if (localStorage.getItem("heatforge") == 1) {localStorage.setItem("heatforge", 2);tokens -= 500; document.getElementById("tokens").innerHTML = tokens;}}">Heat forge, price: 500 tokens</button>
 
     <script>
     
@@ -23,12 +23,7 @@
         }
       document.getElementById("tokens").innerHTML = tokens;
       function buyheatforge() {
-        if (tokens >= 500) {
-          if (localStorage.getItem("heatforge") == 1) {
-            localStorage.setItem("heatforge", 2);
-            tokens -= 500;
-          }
-        }
+        
       }
 
 
