@@ -11,7 +11,7 @@
     <h3>tokens: <span id=tokens>0</span></h3>
     <br>
     <button onclick="location.href='index.html';">back</button> 
-    <button id="one" onclick="heatforge()">Buy heat forge, 500 tokens</button>
+    <button id="one" onclick=heatforge()>Buy heat forge, 500 tokens</button>
 
     <script>
 
@@ -24,6 +24,7 @@
             localStorage.setItem("heatforge", 1);
              tokens = +localStorage.getItem("tokens");
             tokens -= 500;
+            document.getElementById("tokens").innerHTML = tokens
             localStorage.setItem("tokens", tokens);
           }
         }
