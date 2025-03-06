@@ -14,7 +14,7 @@
     <button onclick="location.href='shop.html';">shop</button>
     <button onclick="location.href='tokens.html';">tokens</button>
     <button id="one" onclick=packone()>glitch pack, 25 tokens</button>
-    <button id="lavaforge">???</button>
+    <button id="lavaforge" onclick="lavaforge()">???</button>
     <img id="kirb" src="Blank.png" width=250 height=200>
     <h3 id="rare"></h3> <h3>    </h3> <h3 id="perc"></h3>
     <script>
@@ -40,6 +40,9 @@
         alert("Oh?");
         alert("You can't do that because i'm in the way?");
         alert("Fine i'll leave :(")
+      }
+      if (localStorage.getItem("heatforge") == 2) {
+        
       }
       var one = +localStorage.getItem("one");
       var two = +localStorage.getItem("two");
