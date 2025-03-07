@@ -28,13 +28,14 @@
         document.getElementById("mgtr").innerHTML = "magma transmutation, cost: 100 tokens and three magmabo CRTs";
       }
       function mgtr() {
-        if (localStorage.getItem("one") >= 3 && tokens >= 100){
+        if (one >= 3 && tokens >= 100){
           tokens -= 100;
           localStorage.setItem("tokens", tokens);
           one -= 3;
           localStorage.setItem("one", one);
           magtokens += 1;
           localStorage.setItem("magtokens", magtokens);
+          document.getElementById("tokens").innerHTML = tokens;
         }
       }
       if (localStorage.getItem("lightforge") == 1 && localStorage.getItem("wizard") != 1) {
