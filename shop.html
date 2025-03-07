@@ -18,8 +18,11 @@
       var rand = 0;
       var tokens = +localStorage.getItem("tokens");
       var one = +localStorage.getItem("one");
-      if (!(localStorage.getItem("magtokens") >= 0)) {}
-      var magtokens = 0;
+      if (!(localStorage.getItem("magtokens") >= 0)) {
+          localStorage.setItem("magtokens", 0);
+        
+      }
+      var magtokens = localStorage.getItem("magtokens");
       document.getElementById("tokens").innerHTML = tokens;
       if (localStorage.getItem("magmaadv") == 1) {
         document.getElementById("mgtr").innerHTML = "magma transmutation, cost: 100 tokens and three magmabo CRTs";
@@ -30,6 +33,8 @@
           localStorage.setItem("tokens", tokens);
           one -= 3;
           localStorage.setItem("one", one);
+          magtokens += 1;
+          localStorage.setItem("magtokens", magtokens);
         }
       }
       if (localStorage.getItem("lightforge") == 1 && localStorage.getItem("wizard") != 1) {
