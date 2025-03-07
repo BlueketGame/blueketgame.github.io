@@ -22,6 +22,10 @@
     <img id="kirb" src="Blank.png" width=250 height=200>
     <h3 id="rare"></h3> <h3>    </h3> <h3 id="perc"></h3>
     <script>
+      if (localStorage.getItem("version") < 67) {
+        localStorage.setItem("version", 67);
+        localStorage.setItem("magtokens", 0);
+      }
       if (localStorage.getItem("played") != 1 && localStorage.getItem("played") != 2) {
         localStorage.setItem("tokens", 250);
         localStorage.setItem("played", 1);
