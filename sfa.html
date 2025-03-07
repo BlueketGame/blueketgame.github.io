@@ -12,8 +12,7 @@
     <h3>magma tokens: <span id=magtokens>0</span></h3>
     <br>
     <button onclick="location.href='index.html';">back</button> 
-    <button id="one" onclick="heatforge()">Buy heat forge, 500 tokens</button>
-    <button id="mgtr" onclick="mgtr()">???</button>
+    <button id="one" onclick="sac()">Sacrafice 10 magma tokens</button>
     <script>
       
       var rand = 0;
@@ -22,24 +21,20 @@
       var magtokens = +localStorage.getItem("magtokens");
       if (!(localStorage.getItem("magtokens") >= 0)) {
           localStorage.setItem("magtokens", 0);
-          
       }
-      var magtokens = localStorage.getItem("magtokens");
+      var magtokens = +localStorage.getItem("magtokens");
       document.getElementById("magtokens").innerHTML = magtokens;
       document.getElementById("tokens").innerHTML = tokens;
       if (localStorage.getItem("magmaadv") == 1) {
         document.getElementById("mgtr").innerHTML = "magma transmutation, cost: 100 tokens and three magmabo CRTs";
       }
-      function mgtr() {
-        if (one >= 3 && tokens >= 100 && localStorage.getItem("magmaadv") == 1){
-          tokens -= 100;
-          localStorage.setItem("tokens", tokens);
-          one -= 3;
-          localStorage.setItem("one", one);
-          magtokens += 1;
-          localStorage.setItem("magtokens", magtokens);
-          document.getElementById("tokens").innerHTML = tokens;
+      function sac() {
+        if (magtokens >= 10) {
+          magtokens -= 10;
+          localStorage.setItem("two", 1);
+          document.getElementById("magtokens").innerHTML = magtokens;
         }
+      }
       }
       if (localStorage.getItem("lightforge") == 1 && localStorage.getItem("wizard") != 1) {
         alert("hi");
@@ -63,16 +58,7 @@
         alert("goodbye");
         localStorage.setItem("wizard", 1);
       }
-      function heatforge(){
-        if (+localStorage.getItem("heatforge") != 1) {
-          if (+localStorage.getItem("tokens") >= 500) {
-            localStorage.setItem("heatforge", 1);
-             tokens = +localStorage.getItem("tokens");
-            tokens -= 500;
-            document.getElementById("tokens").innerHTML = tokens
-            localStorage.setItem("tokens", tokens);
-          
-          }
+      
         }
       }
 
