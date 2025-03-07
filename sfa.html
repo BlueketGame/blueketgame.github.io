@@ -9,6 +9,7 @@
   <body>
     <h1>Kirbo TCGP</h1>
     <h3>tokens: <span id=tokens>0</span></h3>
+    <h3>magma tokens: <span id=magtokens>0</span></h3>
     <br>
     <button onclick="location.href='index.html';">back</button> 
     <button id="one" onclick="heatforge()">Buy heat forge, 500 tokens</button>
@@ -18,11 +19,13 @@
       var rand = 0;
       var tokens = +localStorage.getItem("tokens");
       var one = +localStorage.getItem("one");
+      var magtokens = +localStorage.getItem("magtokens");
       if (!(localStorage.getItem("magtokens") >= 0)) {
           localStorage.setItem("magtokens", 0);
-        
+          
       }
       var magtokens = localStorage.getItem("magtokens");
+      document.getElementById("magtokens").innerHTML = magtokens;
       document.getElementById("tokens").innerHTML = tokens;
       if (localStorage.getItem("magmaadv") == 1) {
         document.getElementById("mgtr").innerHTML = "magma transmutation, cost: 100 tokens and three magmabo CRTs";
