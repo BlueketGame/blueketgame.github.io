@@ -22,7 +22,7 @@
           localStorage.setItem("magtokens", 0);
         
       }
-      var magtokens = localStorage.getItem("magtokens");
+      var magtokens = +localStorage.getItem("magtokens");
       document.getElementById("tokens").innerHTML = tokens;
       if (localStorage.getItem("magmaadv") == 1) {
         document.getElementById("mgtr").innerHTML = "magma transmutation, cost: 100 tokens and three magmabo CRTs";
